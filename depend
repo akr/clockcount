@@ -1,2 +1,3 @@
 clockcount.o: clockcount.c
 x86.o: x86.s
+x86_64.o: x86_64.s
