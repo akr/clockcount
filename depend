@@ -1,0 +1,2 @@
+clockcount.o: clockcount.c
+x86.o: x86.s
