@@ -1,4 +1,7 @@
 clockcount.o: clockcount.c
+
 x86.o: x86.s
 x86_64.o: x86_64.s
 ia64.o: ia64.s
+sparc.o: sparc.s
+	as -xarch=v8plus sparc.s

@@ -10,6 +10,8 @@ when /x86_64/
   $objs << "x86_64.o"
 when /ia64/
   $objs << "ia64.o"
+when /sparc/
+  $objs << "sparc.o"
 else
   puts "not supported: #{platform}"
   exit 1
