@@ -8,6 +8,8 @@ when /i[3456]86/
   $objs << "x86.o"
 when /x86_64/
   $objs << "x86_64.o"
+when /ia64/
+  $objs << "ia64.o"
 else
   puts "not supported: #{platform}"
   exit 1
