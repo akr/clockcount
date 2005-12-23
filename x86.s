@@ -4,8 +4,5 @@
 .globl clockcount
 	.type	clockcount, @function
 clockcount:
-	pushl	%ebp
-	movl	%esp, %ebp
 	rdtsc
-	popl	%ebp
 	ret
