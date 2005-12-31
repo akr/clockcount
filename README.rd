@@ -24,18 +24,12 @@ clockcount access processor specific clock counter.
 
 == Supported Platforms
 
-* Intel Pentium
-  rdtsc, 64bit
-* AMD64, Intel EM64T
-  rdtsc, 64bit
-* Intel Itanium (IA64)
-  ar44 register, 64bit
-* PowerPC (POWER3, PowerPC603 or later)
-  mftb and mftbu, 64bit
-* Sun UltraSparc
-  tick register, 64bit
-* HP PA-RISC 2.0
-  cr16 register, 64bit
+* Intel Pentium (rdtsc, 64bit)
+* AMD64, Intel EM64T (rdtsc, 64bit)
+* Intel Itanium (IA64) (ar44 register, 64bit)
+* PowerPC (POWER3, PowerPC603 or later) (mftb and mftbu, 64bit)
+* Sun UltraSparc (tick register, 64bit)
+* HP PA-RISC 2.0 (cr16 register, 64bit)
 
 == Note
 
