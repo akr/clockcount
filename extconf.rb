@@ -14,6 +14,8 @@ when /\Asparc-/
   $objs << "sparc.o"
 when /\Apowerpc-/
   $objs << "powerpc.o"
+when /\Ahppa2\.0w-/
+  $objs << "hppa.o"
 else
   puts "not supported: #{platform}"
   exit 1
