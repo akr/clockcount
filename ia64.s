@@ -1,5 +1,4 @@
         .file   "ia64.s"
-        .pred.safe_across_calls p1-p5,p16-p63
         .text   
         .align 16
         .global clockcount#
