@@ -1,11 +1,11 @@
 #include "ruby.h"
 
-extern long long clockcount(void);
+extern unsigned long long clockcount(void);
 
 static VALUE
 clockcount_m(VALUE self)
 {
-  return LL2NUM(clockcount());
+  return ULL2NUM(clockcount());
 }
 
 void
