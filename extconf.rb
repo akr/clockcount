@@ -29,20 +29,31 @@ platform = CROSS_COMPILING || RUBY_PLATFORM
 case platform
 when /\Ai[3456]86-/
   $objs << "x86.o"
+  bits = 64
 when /\Ax86_64/
   $objs << "x86_64.o"
+  bits = 64
 when /\Aia64-/
   $objs << "ia64.o"
+  bits = 64
 when /\Asparc-/
   $objs << "sparc.o"
+  bits = 64
 when /\Apowerpc-/
   $objs << "powerpc.o"
+  bits = 64
 when /\Ahppa2\.0w-/
   $objs << "hppa.o"
+  bits = 64
+when /\Aalpha/
+  $objs << "alpha.o"
+  bits = 32
 else
   puts "not supported: #{platform}"
   exit 1
 end
+
+$CFLAGS << " -DCLOCKCOUNT_BITS=#{bits}"
 
 create_makefile('clockcount')
 

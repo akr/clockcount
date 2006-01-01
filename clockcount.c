@@ -43,6 +43,10 @@ clockcount_m(VALUE self)
 void
 Init_clockcount()
 {
+  VALUE mClockCount;
+
+  mClockCount = rb_define_module("ClockCount");
+  rb_define_const(mClockCount, "CLOCKCOUNT_BITS", INT2FIX(CLOCKCOUNT_BITS));
   rb_define_global_function("ClockCount", clockcount_m, 0);
 }
 

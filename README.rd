@@ -17,6 +17,10 @@ clockcount access processor specific clock counter.
   0x18a9d93b80a6a 1.27955467871139[GHz]   3.92465434730725[day]
   ...
 
+== Home Page
+
+((<URL:http://cvs.m17n.org/~akr/clockcount/>))
+
 == Download
 
 ((<URL:http://cvs.m17n.org/viewcvs/ruby/clockcount.tar.gz?view=tar>))
@@ -27,6 +31,14 @@ clockcount access processor specific clock counter.
   make
   make install
 
+optional:
+
+  make doc
+
+== Reference Manual
+
+((<URL:doc/index.html>))
+
 == Supported Platforms
 
 * Intel Pentium (rdtsc, 64bit)
@@ -35,6 +47,8 @@ clockcount access processor specific clock counter.
 * PowerPC (PowerPC603, POWER3 or later) (mftb and mftbu, 64bit)
 * Sun UltraSparc (tick register, 64bit)
 * HP PA-RISC 2.0 (cr16 register, 64bit)
+
+* Alpha (rpcc, 32bit)
 
 == Note
 
