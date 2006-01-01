@@ -9,14 +9,17 @@ clockcount access processor specific clock counter.
 
 == Sample Script to Mesure Clock Speed
 
-  % ruby sample.rb 
-  0x171faf0c3cbed
-  0x171fb3e46f666 1.30258316772774[GHz]
-  0x171fb8a2981c2 1.27298907227854[GHz]
-  0x171fbd7ae77dc 1.30054508000412[GHz]
-  0x171fc21e131d4 1.24473258972987[GHz]
-  0x171fc6d123ecf 1.26146415868276[GHz]
+  % ruby sample.rb
+  0x18a9c616f16d5
+  0x18a9caca6f864 1.2640276924433[GHz]    3.97282828038034[day]
+  0x18a9cf9ac9d9c 1.29211869909757[GHz]   3.88646950425614[day]
+  0x18a9d4772970a 1.30474179349239[GHz]   3.84888032793389[day]
+  0x18a9d93b80a6a 1.27955467871139[GHz]   3.92465434730725[day]
   ...
+
+== Download
+
+  ((<URL:http://cvs.m17n.org/viewcvs/ruby/clockcount.tar.gz?view=tar>))
 
 == Install
 
