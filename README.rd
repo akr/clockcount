@@ -19,7 +19,7 @@ clockcount access processor specific clock counter.
 
 == Download
 
-  ((<URL:http://cvs.m17n.org/viewcvs/ruby/clockcount.tar.gz?view=tar>))
+((<URL:http://cvs.m17n.org/viewcvs/ruby/clockcount.tar.gz?view=tar>))
 
 == Install
 
