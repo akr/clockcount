@@ -23,8 +23,11 @@
 
 require 'clockcount'
 
+STDOUT.sync = true
+
 c1 = ClockCount()
 t1 = Time.now
+puts "#{c1}"
 loop {
   sleep 1
   c2 = ClockCount()
