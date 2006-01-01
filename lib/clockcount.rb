@@ -1,6 +1,8 @@
 require 'clockcount.so'
 
 if ClockCount::CLOCKCOUNT_BITS == 32
+  require 'thread'
+
   class << ClockCount
     alias ClockCount32 ClockCount
     public :ClockCount32
@@ -16,10 +18,12 @@ if ClockCount::CLOCKCOUNT_BITS == 32
     module_function
 
     def ClockCount
-      c2 = ClockCount.ClockCount32
-      ClockCount.clock_hi += 1 if ClockCount.clock_lo > c2
-      ClockCount.clock_lo = c2
-      ClockCount.clock_hi * 0x100000000 + c2
+      Thread.exclusive {
+	c2 = ClockCount.ClockCount32
+	ClockCount.clock_hi += 1 if ClockCount.clock_lo > c2
+	ClockCount.clock_lo = c2
+	ClockCount.clock_hi * 0x100000000 + c2
+      }
     end
 
     Thread.new { 
