@@ -32,7 +32,14 @@ loop {
   sleep 1
   c2 = ClockCount()
   t2 = Time.now
-  puts "#{c2}\t#{(c2-c1)/(t2-t1)}[clock/sec]"
+  speed = (c2-c1)/(t2-t1)
+  if 1000000000000 < speed then speed /= 1000000000000; unit = 'THz'
+  elsif 1000000000 < speed then speed /= 1000000000; unit = 'GHz'
+  elsif 1000000 < speed then speed /= 1000000; unit = 'MHz'
+  elsif 1000 < speed then speed /= 1000; unit = 'kHz'
+  else unit = 'Hz'
+  end
+  puts "#{c2}\t#{speed}[#{unit}]"
   c1 = c2
   t1 = t2
 }
