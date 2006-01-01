@@ -27,6 +27,13 @@ SUCH DAMAGE.
 
 extern unsigned long long clockcount(void);
 
+/*
+ *  call-seq: 
+ *    ClockCount()  => integer
+ *
+ *  ClockCount() returns machine specific clock counter.
+ */
+
 static VALUE
 clockcount_m(VALUE self)
 {
