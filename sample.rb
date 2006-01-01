@@ -33,13 +33,19 @@ loop {
   c2 = ClockCount()
   t2 = Time.now
   speed = (c2-c1)/(t2-t1)
+  uptime = c2 / speed
   if 1000000000000 < speed then speed /= 1000000000000; unit = 'THz'
   elsif 1000000000 < speed then speed /= 1000000000; unit = 'GHz'
   elsif 1000000 < speed then speed /= 1000000; unit = 'MHz'
   elsif 1000 < speed then speed /= 1000; unit = 'kHz'
   else unit = 'Hz'
   end
-  puts "0x#{'%x' % c2}\t#{speed}[#{unit}]"
+  if 86400 <= uptime then uptime /= 86400; uptime_unit = 'day'
+  elsif 3600 <= uptime then uptime /= 3600; uptime_unit = 'hour'
+  elsif 60 <= uptime then uptime /= 60; uptime_unit = 'min'
+  else uptime_unit = 'sec'
+  end
+  puts "0x#{'%x' % c2}\t#{speed}[#{unit}]\t#{uptime}[#{uptime_unit}]"
   c1 = c2
   t1 = t2
 }
