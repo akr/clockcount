@@ -26,6 +26,7 @@ require 'mkmf'
 $objs = ["clockcount.o"]
 
 platform = CROSS_COMPILING || RUBY_PLATFORM
+puts "platform: #{platform}"
 case platform
 when /\Ai[3456]86-/
   $objs << "x86.o"
