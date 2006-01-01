@@ -9,12 +9,13 @@ clockcount access processor specific clock counter.
 
 == Sample Script to Mesure Clock Speed
 
-  % ruby sample.rb     
-  371254883337042 1250109646.8873[clock/sec]
-  371256128197122 1244767967.17043[clock/sec]
-  371257378461133 1250206501.50093[clock/sec]
-  371258629206976 1250396982.24195[clock/sec]
-  ...
+  % ruby sample.rb 
+  0x171faf0c3cbed
+  0x171fb3e46f666 1.30258316772774[GHz]
+  0x171fb8a2981c2 1.27298907227854[GHz]
+  0x171fbd7ae77dc 1.30054508000412[GHz]
+  0x171fc21e131d4 1.24473258972987[GHz]
+  0x171fc6d123ecf 1.26146415868276[GHz]
 
 == Install
 
