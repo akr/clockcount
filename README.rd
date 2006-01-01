@@ -16,6 +16,7 @@ clockcount access processor specific clock counter.
   0x171fbd7ae77dc 1.30054508000412[GHz]
   0x171fc21e131d4 1.24473258972987[GHz]
   0x171fc6d123ecf 1.26146415868276[GHz]
+  ...
 
 == Install
 
