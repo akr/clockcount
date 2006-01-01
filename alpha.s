@@ -17,5 +17,4 @@ clockcount:
         zapnot $0,15,$0
         ret $31,($26),1
         .end clockcount
-        .section        .note.GNU-stack,"",@progbits
         .ident  "GCC: (GNU) 3.3.5 (Debian 1:3.3.5-13)"
