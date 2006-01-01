@@ -27,7 +27,7 @@ STDOUT.sync = true
 
 c1 = ClockCount()
 t1 = Time.now
-puts "#{c1}"
+puts "0x#{'%x' % c1}"
 loop {
   sleep 1
   c2 = ClockCount()
@@ -39,7 +39,7 @@ loop {
   elsif 1000 < speed then speed /= 1000; unit = 'kHz'
   else unit = 'Hz'
   end
-  puts "#{c2}\t#{speed}[#{unit}]"
+  puts "0x#{'%x' % c2}\t#{speed}[#{unit}]"
   c1 = c2
   t1 = t2
 }
