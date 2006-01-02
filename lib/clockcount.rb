@@ -1,28 +1,32 @@
 require 'clockcount.so'
 
-if ClockCount::CLOCKCOUNT_BITS == 32
+if ClockCount::CLOCKCOUNT_BITS < 64
   require 'thread'
 
   class << ClockCount
-    alias ClockCount32 ClockCount
-    public :ClockCount32
+    alias RawClockCount ClockCount
+    public :RawClockCount
 
     attr_accessor :clock_hi
     attr_accessor :clock_lo
   end
 
+  module ClockCount
+    HI_STEP = 1 << ClockCount::CLOCKCOUNT_BITS
+  end
+
   ClockCount.clock_hi = 0
-  ClockCount.clock_lo = ClockCount.ClockCount32
+  ClockCount.clock_lo = ClockCount.RawClockCount
 
   module Kernel
     module_function
 
     def ClockCount
       Thread.exclusive {
-	c2 = ClockCount.ClockCount32
-	ClockCount.clock_hi += 1 if ClockCount.clock_lo > c2
+	c2 = ClockCount.RawClockCount
+	ClockCount.clock_hi += ClockCount::HI_STEP if ClockCount.clock_lo > c2
 	ClockCount.clock_lo = c2
-	ClockCount.clock_hi * 0x100000000 + c2
+	ClockCount.clock_hi + c2
       }
     end
 
