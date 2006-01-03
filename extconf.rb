@@ -31,7 +31,7 @@ case platform
 when /\Ai[3456]86-/
   $objs << "x86.o"
   bits = 64
-when /\Ax86_64/
+when /\Ax86_64-/
   $objs << "x86_64.o"
   bits = 64
 when /\Aia64-/
@@ -46,7 +46,7 @@ when /\Apowerpc-/
 when /\Ahppa2\.0w-/
   $objs << "hppa.o"
   bits = 64
-when /\Aalpha/
+when /\Aalpha/ # alpha, alphaev6, alphaev68, etc.
   $objs << "alpha.o"
   bits = 32
 else
