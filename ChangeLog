@@ -1,3 +1,9 @@
+2006-01-03  Tanaka Akira  <akr@m17n.org>
+
+	* sparc64.s: new file.  suport SPARC-V9 (%tick register, 64bit).
+
+	* extconf.rb: check __sparcv9 for SPARC platform.
+
 2006-01-02  Tanaka Akira  <akr@m17n.org>
 
 	* clockcount.c: define ClockCount::CLOCKCOUNT_BITS.
@@ -6,7 +12,7 @@
 
 2006-01-01  Tanaka Akira  <akr@m17n.org>
 
-	* support Alpha (rpcc, 32bit).
+	* alpha.s: new file.  support Alpha (rpcc, 32bit).
 
 	* lib/clockcount.rb: new file to count wrap around.
 

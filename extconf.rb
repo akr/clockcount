@@ -38,8 +38,20 @@ when /\Aia64-/
   $objs << "ia64.o"
   bits = 64
 when /\Asparc-/
-  $objs << "sparc.o"
   bits = 64
+  is_sparcv9 = try_compile(<<'End')
+#if !defined(__sparcv9)
+# error "not SPARC-V9"
+#endif
+End
+  $ASFLAGS = ''
+  if is_sparcv9
+    $ASFLAGS << ' -xarch=v9' 
+    $objs << "sparc64.o"
+  else
+    $ASFLAGS << ' -xarch=v8plus' 
+    $objs << "sparc.o"
+  end
 when /\Apowerpc-/
   $objs << "powerpc.o"
   bits = 64
@@ -57,4 +69,8 @@ end
 $CFLAGS << " -DCLOCKCOUNT_BITS=#{bits}"
 
 create_makefile('clockcount')
+
+open("Makefile", "ab") {|mfile|
+  mfile.puts "ASFLAGS = #$ASFLAGS" if defined? $ASFLAGS
+}
 
