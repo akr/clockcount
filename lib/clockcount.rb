@@ -33,7 +33,7 @@ if ClockCount::CLOCKCOUNT_BITS < 64
     Thread.new { 
       while true 
 	ClockCount() # call redefined version
-	sleep 1
+	sleep 1 # shold work if less than 4GHz.
       end
     } 
   end
