@@ -55,6 +55,9 @@ End
 when /\Apowerpc-/
   $objs << "powerpc.o"
   bits = 64
+when /\Apowerpc64-/
+  $objs << "powerpc64.o"
+  bits = 64
 when /\Ahppa2\.0w-/
   $objs << "hppa.o"
   bits = 64
