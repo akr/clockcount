@@ -64,6 +64,9 @@ when /\Ahppa2\.0w-/
 when /\Aalpha/ # alpha, alphaev6, alphaev68, etc.
   $objs << "alpha.o"
   bits = 32
+when /\As390-/ # S/390 (31bit)
+  $objs << "s390.o"
+  bits = 64
 else
   puts "not supported: #{platform}"
   exit 1
