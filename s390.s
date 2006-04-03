@@ -27,18 +27,13 @@
 .globl clockcount
 	.type	clockcount, @function
 clockcount:
-.LFB3:
 	stm	%r11,%r15,44(%r15)
-.LCFI0:
 	lr	%r1,%r15
 	ahi	%r15,-104
-.LCFI1:
 	st	%r1,0(%r15)
 	lr	%r11,%r15
-.LCFI2:
 	stck 96(%r11)
 	lm	%r2,%r3,96(%r11)
 	lm	%r11,%r15,148(%r11)
 	br	%r14
-.LFE3:
 	.size	clockcount, .-clockcount
