@@ -1,3 +1,7 @@
+2007-11-09  Tanaka Akira  <akr@fsij.org>
+
+	* (README): renamed from README.rd.
+
 2006-01-04  Tanaka Akira  <akr@m17n.org>
 
 	* powerpc64.s: new file.  support PowerPC64 (mftb, 64bit).

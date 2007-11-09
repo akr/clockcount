@@ -31,6 +31,6 @@ powerpc.o: powerpc.s
 hppa.o: hppa.s
 alpha.o: alpha.s
 
-doc: clockcount.c
-	rm -rf doc
-	rdoc clockcount.c
+rdoc: clockcount.c
+	rm -rf rdoc
+	rdoc --op rdoc clockcount.c
