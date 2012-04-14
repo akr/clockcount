@@ -28,11 +28,7 @@ Tanaka Akira <akr@fsij.org>
 
 * latest release: http://www.a-k-r.org/clockcount/clockcount-0.1.tar.gz
 
-* development version in CVS repository:
-
-  http://cvs.m17n.org/viewcvs/ruby/clockcount/ or checkout with:
-
-    % cvs -d :pserver:anonymous@cvs.m17n.org:/cvs/ruby co clockcount
+* development version: https://github.com/akr/clockcount
 
 == Install
 
